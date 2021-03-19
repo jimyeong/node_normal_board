@@ -1,0 +1,17 @@
+{{#if id}}
+    <div class="row">
+        <div class="col s12">
+            <form action="/user/comment/delete/{{id}}?_method=delete" method="post">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="name">Type your name again</label>
+                        <input type=text name="signature" class="autocomplete">
+                    </div>
+                </div>
+                <input type="submit" class="btn" value="확인">
+            </form>
+        </div>
+    </div>
+{{else}}
+    <p>inappropriate access</p>
+{{/if}}

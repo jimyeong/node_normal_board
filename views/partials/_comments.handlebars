@@ -1,0 +1,31 @@
+<div class="col s12 m6">
+
+    <table>
+
+        {{#if comments}}
+            <thead>
+            <tr>
+                <th>Author</th>
+                <th>Comment</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            {{#each comments}}
+                <tbody>
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{comment}}</td>
+                    <td><a href="/user/comment/edit/{{commentId}}" class="btn green">수정</a></td>
+                    <td><a href="/user/comment/delete/{{commentId}}" class="btn red">삭제</a></td>
+                </tr>
+
+                </tbody>
+
+            {{/each}}
+
+        {{else}}
+            <p>no comments!</p>
+        {{/if}}
+    </table>
+</div>

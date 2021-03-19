@@ -1,0 +1,33 @@
+
+<div class="col s12 m6">
+    <h4>Here is the users that you have added so far!</h4>
+    {{#if users}}
+        <table class="striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Married</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each users}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{age}}</td>
+                    <td>
+                        <!--#if requires exactly one argument-->
+                        {{#if (conditionHelper this.married 1)}}
+                            YES
+                        {{else}}
+                            NO
+                        {{/if}}
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    {{else}}
+        <p>no one exists</p>
+    {{/if}}
+</div>

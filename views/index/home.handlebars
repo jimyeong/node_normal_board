@@ -1,0 +1,62 @@
+<h3>Add users and comments here and there</h3>
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card">
+            <h5>add users</h5>
+            <div class="card-content white-text">
+                <form action="/user/signup" method="post">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="name">이름</label>
+                                    <input type="text" id="name" name="name" class="autocomplete">
+                                </div>
+                                <div class="input-field col s12">
+                                    <label for="name">나이</label>
+                                    <input type=text name="age" class="autocomplete">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label>
+                            <input type="checkbox" name="isMarried"/>
+                            <span>결혼여부</span>
+                        </label>
+                    </div>
+                    <input type="submit" class="btn" value="확인">
+                </form>
+            </div>
+        </div>
+    </div>
+<!--    코멘트 작성-->
+    <div class="col s12 m6">
+        <div class="card">
+            <h5>add comments</h5>
+            <div class="card-content white-text">
+                <form action="/user/comments" method="post">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="name">사용자 이름</label>
+                                    <input type="text" id="name" name="name" class="autocomplete">
+                                </div>
+                                <div class="input-field col s12">
+                                    <label for="comment">코멘트</label>
+                                    <input type=text name="comment" class="autocomplete">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" value="확인">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    {{> _userslist}}
+    {{> _comments}}
+</div>
