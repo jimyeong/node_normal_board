@@ -5,7 +5,6 @@ module.exports = {
         let isValidate = false;
         // sql 키워드와 연관없는 문자열만 패스시킨다.
         isValidate = this.isSafeFromSQLinjection(input);
-        console.log("@@@@@@@@@is Validate? ",isValidate);
         return isValidate;
     },
 
