@@ -18,6 +18,7 @@
     "method-override": "^3.0.0",
     "morgan": "^1.10.0",
     "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
     "sequelize": "^6.5.0",
     "sequelize-cli": "^6.2.0",
     "treemap-js": "^1.2.1"

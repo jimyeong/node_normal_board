@@ -43,7 +43,9 @@ while(!iterator.next().done){
 
 ```
 // sql방어 코드, 조금더 짧게 만들 수 있을 텐데.. 일단..
+db_sanitize
 /[(^select|insert|update|delete|drop|table|alter|and|or|\s|order\sby|\\|\/|\.|\%\d?|\@\@version|\@|\'+|\"+|!|\<\d?\>|\<|\>|\-|\&)]/gm
+///(\'|\"|\-|\=|\+|\;|\:|\bor\b|\band\b|\(|\)|\*)/gm 이렇게 바꾸려고 한다.
 ```
  
 #### 전역함수로 함수등록

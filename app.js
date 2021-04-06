@@ -56,31 +56,6 @@ sequelize.sync({force: false})
     });
 
 
-// app.set("view engine", "handlebars");
-// app.engine("handlebars", hbs.engine);
-
-// error middleware set up
-/*
-app.use((req,res,next)=>{
-    const error = new Error(`${req.method} ${req.url} no routes exists`);
-    error.status = 404;
-    next(error);
-});
-*/
-
-/*
-
-app.use((err, req,res, next) => {
-    res.locals.message = err.message;
-
-    // if production env, then hide error messages;
-    res.locals.error = process.env.NODE_ENV !== "production" ? err : {};
-    res.status(err.status || 500);
-    res.render("error");
-});
-*/
-
-
 app.get("/", (req, res) => {
     let status = {}
     if(isValidate){
